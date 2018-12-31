@@ -3,7 +3,7 @@ datasubset<-subset(dataset,Date=="1/2/2007"|Date=="2/2/2007",na.rm=TRUE)
 datasubset$Timestamp<-paste(datasubset$Date,datasubset$Time)
 datasubset$Timestamp<-strptime(datasubset$Timestamp, format="%d/%m/%Y %H:%M:%S")
 
-par(mfrow=c(2,2)
+par(mfrow=c(2,2))
 
 plot(datasubset$Timestamp,as.numeric(as.character(datasubset$Global_active_power)),type="l",xlab="",ylab="Global Active Power")
 
